@@ -23,5 +23,5 @@ jobs:
       - uses: "DeterminateSystems/flakehub-push@main"
         with:
           visibility: "public"
-          name: "mrhenry/nix-shopify-cli"
+          name: "digital-brew/nix-shopify-cli"
           tag: "${{ inputs.tag }}"

@@ -5,24 +5,24 @@ This is the [shopify-cli](https://github.com/Shopify/cli) packaged for Nix.
 ## Installation
 
 ```sh
-nix profile install github:mrhenry/nix-shopify-cli
+nix profile install github:digital-brew/nix-shopify-cli
 ```
 
 Alternatively you can just run the CLI directly without permanently installing it:
 
 ```sh
-nix run github:mrhenry/nix-shopify-cli -- <args>
+nix run github:digital-brew/nix-shopify-cli -- <args>
 ```
 
 # Usage as a flake
 
-[![FlakeHub](https://img.shields.io/endpoint?url=https://flakehub.com/f/mrhenry/nix-shopify-cli/badge)](https://flakehub.com/flake/mrhenry/nix-shopify-cli)
+[![FlakeHub](https://img.shields.io/endpoint?url=https://flakehub.com/f/digital-brew/nix-shopify-cli/badge)](https://flakehub.com/flake/digital-brew/nix-shopify-cli)
 
 Add nix-shopify-cli to your `flake.nix`:
 
 ```nix
 {
-  inputs.nix-shopify-cli.url = "https://flakehub.com/f/mrhenry/nix-shopify-cli/*.tar.gz";
+  inputs.nix-shopify-cli.url = "https://flakehub.com/f/digital-brew/nix-shopify-cli/*.tar.gz";
 
   outputs = { self, nix-shopify-cli }: {
     # Use in your outputs
