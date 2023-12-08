@@ -16,16 +16,17 @@ nix run github:digital-brew/nix-shopify-cli -- <args>
 
 # Usage as a flake
 
-[![FlakeHub](https://img.shields.io/endpoint?url=https://flakehub.com/f/digital-brew/nix-shopify-cli/badge)](https://flakehub.com/flake/digital-brew/nix-shopify-cli)
-
 Add nix-shopify-cli to your `flake.nix`:
 
 ```nix
 {
-  inputs.nix-shopify-cli.url = "https://flakehub.com/f/digital-brew/nix-shopify-cli/*.tar.gz";
+  inputs.nix-shopify-cli.url = "github:digital-brew/nix-shopify-cli";
 
   outputs = { self, nix-shopify-cli }: {
     # Use in your outputs
+    environment.systemPackages = [
+      nix-shopify-cli.packages.${system}.default
+    ];
   };
 }
 
@@ -55,5 +56,4 @@ nix flake check
 6. Run `nix run -- <some args>` to test the new version.
 7. When you are happy with the new version:
    1. push the changes to GitHub
-   2. `nix develop --command do-release`
-   3. Publish the draft release on github
+   2. rebuild your nix config
