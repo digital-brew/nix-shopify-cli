@@ -5,7 +5,7 @@ let
   version = packageJSON.dependencies."@shopify/cli";
 
   # This needs to be updated every time the package closure is changed
-  downloadHash = "sha256-tQj6hu0fniCjfk92Q/Sc121Ab03Ep4j3GflBImfSEEw=";
+  downloadHash = "sha256-rbBvX3OpxfGPekyrx0UXoLTk6ElQjt5EKD7I0XPMhcE=";
 
   # Download but don't install/build the package dependencies
   # The output hash should be stable across diferent platforms/systems

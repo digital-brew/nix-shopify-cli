@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    nixpkgs.url = "github:nixos/nixpkgs/release-23.11";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -22,7 +22,7 @@
           themeCheckVersion = pkgs.testers.testVersion {
             package = cli;
             command = "HOME=/tmp shopify theme check --version";
-            version = "1.15.0";
+            version = "2.0.0";
           };
         };
 
